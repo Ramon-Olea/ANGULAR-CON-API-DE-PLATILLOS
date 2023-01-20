@@ -1,0 +1,42 @@
+
+<app-menu></app-menu>
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-lg-8 offset-lg-2 text-center">
+      <div class="card">
+        <!--tips: add .text-center,.text-right to the .card to change card text alignment-->
+        <div class="card-body">
+          <h5 class="card-title">INGREDIENTES POPULARES</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<div class="mt-4">
+  <div class="row">
+
+
+    <div class="col-lg-12">
+      <div class="card">
+        <div class="card-body text-center">
+          <H4> LISTADO DE INGREDIENTES </H4>
+
+          <table class="table table-light text-center">
+            <tbody>
+              <tr *ngFor="let tarjeta of listTarjeta; let i = index">
+                <td>  <button mat-stroked-button routerLink="/platillos/{{ tarjeta.strIngredient }}"  routerLinkActive="active">
+
+                  {{ tarjeta.strIngredient }}
+                </button>
+
+              </td>
+
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>

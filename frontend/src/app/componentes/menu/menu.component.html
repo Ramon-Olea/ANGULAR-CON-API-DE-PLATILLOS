@@ -1,0 +1,45 @@
+<mat-toolbar>
+
+  <span>desarrollo para angular</span>
+  <span class="example-spacer"></span>
+  <mat-divider></mat-divider>
+  &nbsp;
+  &nbsp;
+
+  <button mat-stroked-button routerLink="/"  routerLinkActive="active">
+
+   Inicio
+  </button>
+  &nbsp;
+  &nbsp;
+
+  <button mat-stroked-button routerLink="/ingredientes"   routerLinkActive="active">
+
+    Ingredientes populares
+  </button>
+  &nbsp;
+  &nbsp;
+
+ <mat-divider></mat-divider>
+<!--   <button mat-stroked-button routerLink="/ingredientes"  routerLinkActive="active">
+
+    Platillos
+  </button> -->
+
+  <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+    <mat-icon>more_vert</mat-icon>
+  </button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item>
+      <mat-icon>account_circle</mat-icon>
+
+      <span>PERFIL</span>
+    </button>
+
+    <button mat-menu-item>
+      <mat-icon>power_settings_new</mat-icon>
+      <span>SALIR</span>
+    </button>
+  </mat-menu>
+
+</mat-toolbar>
